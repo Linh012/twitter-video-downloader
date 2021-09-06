@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Twitter Video Downloader",
+  "description": "Extension for downloading videos and gifs on Twitter.com",
+  "permissions": [
+    "*://*.twitter.com/*",
+    "*://twitter.com/*",
+    "tabs",
+    "downloads"
+  ],
+
+  "content_scripts": [{
+    "matches": ["*://twitter.com/*", "*://mobile.twitter.com/*"],
+    "js": ["js/jquery-3.6.0.min.js", "js/content.js"],
+    "css": ["content.css"]
+  }],
+
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  }
+}
